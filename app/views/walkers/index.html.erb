@@ -1,0 +1,8 @@
+
+<h1>Walkers</h1>
+
+<% @walkers.each do |walker| %>
+    <p>
+        link_to <%= walker.first_name %>  <%= walker.last_name, walker_path(walker) %>
+    </p>
+<% end %>

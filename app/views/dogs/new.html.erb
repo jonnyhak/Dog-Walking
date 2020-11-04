@@ -1,0 +1,22 @@
+
+<%= form_for @dog do |f| %>
+    <% if flash[:dog_errors] %>
+        <% flash[:dog_errors].each do |error| %>
+            <%= error %>
+        <% end %>
+    <% end %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :breed %>
+    <%= f.text_field :breed %>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <%= f.label :sex %>
+    <%= f.label :m %>
+    <%= f.radio_button :sex, "M"  %>
+    <%= f.label :f %>
+    <%= f.radio_button :sex, "F" %>
+
+    <%= f.submit %>
+<% end %>

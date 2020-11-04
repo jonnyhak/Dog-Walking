@@ -1,0 +1,21 @@
+
+<h1><%= @dog.name %></h1>
+
+<h3>Breed: <%= @dog.breed %></h2>
+
+<h3>Age: <%= @dog.age %></h2>
+
+<h3>Sex: <%= @dog.sex %></h2>
+
+<h2>Walks:</h2>
+
+<% @dog.sorted_walks.each do |walk| %>
+    <p>
+        <%= walk.datetime %> :
+
+        <%= walk.walker.first_name %>
+        <%= walk.walker.last_name %>
+
+    </p>
+
+<% end %>

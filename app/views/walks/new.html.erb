@@ -1,0 +1,14 @@
+
+<%= form_for @walk do |f| %>
+  
+  <%= f.label :walker %>
+  <%= f.collection_select :walker_id, Walker.all, :id, :fullname, prompt: true %>
+
+  <%= f.label :dog %>
+  <%= f.collection_select :dog_id, Dog.all, :id, :name, prompt: true %>
+
+  <%= f.label :datetime %>
+  <%= f.datetime_field :datetime %>
+
+    <%= f.submit %>
+<% end %>

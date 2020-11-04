@@ -1,0 +1,11 @@
+
+
+<h1><%= @walker.first_name %> 
+    <%= @walker.last_name %>
+</h1>
+
+<h2><%= @walker.email %></h2>
+
+<img src="<%= @walker.image_url %>" alt="Walker Picture">
+
+<p><%= link_to 'Edit Walker', edit_walker_path %></p>

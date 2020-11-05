@@ -16,6 +16,8 @@
         <%= walk.walker.first_name %>
         <%= walk.walker.last_name %>
 
+        
+        <%= button_to "Delete Walk", walk_path(walk), method: :delete %>
     </p>
 
 <% end %>

@@ -12,6 +12,7 @@ class WalksController < ApplicationController
     def destroy
         @walk = Walk.find(params[:id])
         @walk.destroy
+        redirect_to dog_path(@walk.dog)
     end
 
     private
